@@ -1,4 +1,7 @@
 *.class
 .gradle
 .git
-src/main/resources/application.properties
+.idea
+build
+application.properties
+application.yml

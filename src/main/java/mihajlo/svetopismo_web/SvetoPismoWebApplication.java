@@ -9,5 +9,4 @@ public class SvetoPismoWebApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SvetoPismoWebApplication.class, args);
 	}
-
 }
