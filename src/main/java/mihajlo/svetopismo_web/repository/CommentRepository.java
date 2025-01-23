@@ -1,5 +1,6 @@
-package mihajlo.svetopismo_web.models;
+package mihajlo.svetopismo_web.repository;
 
+import mihajlo.svetopismo_web.model.Comment;
 import org.springframework.data.repository.Repository;
 
 import java.util.Optional;

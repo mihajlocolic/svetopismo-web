@@ -1,4 +1,4 @@
-package mihajlo.svetopismo_web.models;
+package mihajlo.svetopismo_web.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
