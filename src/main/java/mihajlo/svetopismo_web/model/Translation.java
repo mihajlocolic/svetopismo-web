@@ -7,21 +7,18 @@ import lombok.Data;
 import java.util.List;
 
 @Entity
-@Table(name="knjige")
 @Data
-public class Book {
+public class Translation {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "knjiga_id")
-    private int bookId;
-
-    @Column(name = "knjiga_ime")
-    private String bookName;
-
-    @Column(name = "prevod_id", nullable = false, unique = true)
+    @Column(name = "prevod_id", unique = true, nullable = false)
     private int translationId;
 
-    @Column(name = "skracenica")
+    @Column(name = "prevod_ime", nullable = false)
+    private String translationName;
+
+    @Column(name = "skracenica", nullable = false)
     private String abbreviation;
+
 }

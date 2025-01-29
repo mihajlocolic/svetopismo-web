@@ -1,12 +1,9 @@
 package mihajlo.svetopismo_web.repository;
 
-import mihajlo.svetopismo_web.model.Book;
-import mihajlo.svetopismo_web.service.BookService;
+import mihajlo.svetopismo_web.model.Translation;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-
 @Repository
-public interface BookRepository extends JpaRepository<Book, Long> {
-
+public interface TranslationRepository extends JpaRepository<Translation, Long> {
 }
