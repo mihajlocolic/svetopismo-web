@@ -31,8 +31,8 @@ public class BookController {
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    public List<Book> getBooksByName(@RequestParam(value = "name") String bookName) {
-        return bookService.findBooksByName(bookName);
+    public List<Book> findBooksByName(@RequestParam(value = "bookTitle") String bookTitle) {
+        return bookService.findByTitle(bookTitle.trim());
     }
 
 }

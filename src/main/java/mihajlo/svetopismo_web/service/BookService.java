@@ -31,4 +31,9 @@ public class BookService {
         Example<Book> searchExample = Example.of(tempBook);
         return bookRepository.findAll(searchExample);
     }
+
+    public List<Book> findByTitle(String bookTitle) {
+        String str = "%" + bookTitle + "%";
+        return bookRepository.searchBooksByTitle(str.trim());
+    }
 }
