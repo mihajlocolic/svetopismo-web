@@ -13,6 +13,10 @@ import java.util.List;
 @Repository
 public interface BookRepository extends JpaRepository<Book, Long> {
 
-    @Query("SELECT b FROM Book b WHERE LOWER(b.bookName) LIKE LOWER(:bookTitle)")
-    List<Book> searchBooksByTitle(@Param("bookTitle") String bookTitle);
+    @Query("SELECT b FROM Book b WHERE LOWER(b.bookName) LIKE LOWER(:keyword)")
+    List<Book> searchBooksByTitle(@Param("keyword") String bookTitle);
+
+    @Query("SELECT b FROM Book b WHERE LOWER(b.abbreviation) LIKE LOWER(:keyword)")
+    List<Book> searchBooksByAbbreviation(@Param("keyword") String abbreviation);
+
 }

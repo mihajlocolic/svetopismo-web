@@ -30,9 +30,14 @@ public class BookController {
         return bookService.findBookById(id);
     }
 
-    @RequestMapping(method = RequestMethod.GET)
-    public List<Book> findBooksByName(@RequestParam(value = "bookTitle") String bookTitle) {
+    @RequestMapping(value = "/ime", method = RequestMethod.GET)
+    public List<Book> findBooksByName(@RequestParam(value = "keyword") String bookTitle) {
         return bookService.findByTitle(bookTitle.trim());
+    }
+
+    @RequestMapping(value = "/skracenica", method = RequestMethod.GET)
+    public List<Book> findBooksByAbbreviation(@RequestParam(value = "keyword") String abbreviation) {
+        return bookService.findByAbbreviation(abbreviation.trim());
     }
 
 }
