@@ -2,9 +2,7 @@ package mihajlo.svetopismo_web.controller;
 
 
 import mihajlo.svetopismo_web.model.Book;
-import mihajlo.svetopismo_web.repository.BookRepository;
 import mihajlo.svetopismo_web.service.BookService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

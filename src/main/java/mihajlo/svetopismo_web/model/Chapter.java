@@ -3,7 +3,6 @@ package mihajlo.svetopismo_web.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import org.hibernate.annotations.Target;
 
 @Entity
 @Table(name = "glave")
@@ -22,8 +21,8 @@ public class Chapter {
     @Column(name = "stihovi", nullable = false)
     private String verses;
 
-    @Column(name = "knjiga_id", nullable = false)
-    private int bookId;
+    @Column(name = "knjiga_broj", nullable = false)
+    private int bookNumber;
 
     @Column(name = "prevod_id", nullable = false, unique = true)
     private int translationId;

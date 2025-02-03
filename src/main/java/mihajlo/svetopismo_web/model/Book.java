@@ -4,8 +4,6 @@ package mihajlo.svetopismo_web.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.util.List;
-
 @Entity
 @Table(name="knjige")
 @Data

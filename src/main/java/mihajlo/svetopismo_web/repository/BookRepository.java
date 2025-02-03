@@ -1,7 +1,6 @@
 package mihajlo.svetopismo_web.repository;
 
 import mihajlo.svetopismo_web.model.Book;
-import mihajlo.svetopismo_web.service.BookService;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

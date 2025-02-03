@@ -10,5 +10,6 @@ import java.util.List;
 @Repository
 public interface ChapterRepository extends JpaRepository<Chapter, Long> {
 
-    List<Chapter> findByChapterNumber(long chapterNumber);
+    @Query("SELECT c FROM Chapter c WHERE c.bookNumber = :bookNumber AND c.chapterNumber = :chapterNumber")
+    List<Chapter> searchChapterByNumber(long bookNumber, long chapterNumber);
 }
