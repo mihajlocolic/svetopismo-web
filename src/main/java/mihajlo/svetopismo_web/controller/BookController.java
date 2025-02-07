@@ -18,6 +18,7 @@ public class BookController {
         this.bookService = bookService;
     }
 
+    @CrossOrigin(origins = "http://localhost:5500")
     @GetMapping("/")
     public List<Book> getAllBooks() {
         return bookService.showAll();

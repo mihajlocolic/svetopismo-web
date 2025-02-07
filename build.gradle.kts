@@ -32,6 +32,7 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 	implementation("com.mysql:mysql-connector-j:9.1.0")
+	testImplementation("org.apache.httpcomponents.client5:httpclient5")
 
 }
 
