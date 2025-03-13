@@ -4,6 +4,8 @@ package mihajlo.svetopismo_web.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
+
 @Entity
 @Table(name="knjige")
 @Data
@@ -25,4 +27,7 @@ public class Book {
 
     @Column(name = "skracenica")
     private String abbreviation;
+
+    @OneToMany(mappedBy = "book", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Chapter> chapters;
 }

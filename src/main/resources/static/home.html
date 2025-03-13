@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Свето Писмо Веб</title>
+    <link rel="stylesheet" href="./home.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="content">
+        <header>
+            <nav class="navigation">
+                <div class="links">
+                    <a href="./home.html">Свето Писмо Веб</a>
+                    <a href="./pages/books.html">Књиге</a>
+                    <a href="./pages/translations.html">Преводи</a>
+                </div>
+            </nav>
+        </header>
+    
+        <main>
+            <form id="chapterSearchForm" action="#" method="GET">
+                <div class="searchFields">
+                    <div class="inputGroup">
+                        <label for="bookName">Јн</label>
+                        <input id="bookName" name="bookName" type="text" placeholder="Књига">
+                    </div>
+
+                    <div class="inputGroup">
+                        <label for="chapterNumber">1</label>
+                        <input id="chapterNumber" name="chapterNumber" type="number" placeholder="Глава">
+                    </div>
+
+                    <!-- <div> : </div>
+
+                    <div class="inputGroup">
+                        <label for="chapterVerseStart">1</label>
+                        <input id="chapterVerseStart" name="chapterVerseStart" type="text" placeholder="Стих">
+                    </div>
+                    
+                    <div> - </div>
+
+                    <div class="inputGroup">
+                        <label for="chapterVerseEnd">3</label>
+                        <input id="chapterVerseEnd" name="chapterVerseEnd" type="text" placeholder="Стих (Опционо)">
+                    </div> -->
+                </div>
+                <button id="searchButton" type="submit">Претражи</button>
+            </form>
+            <div class="searchedResult">
+                
+            </div>
+        </main>
+    
+        <footer>
+            <p>© Михајло Чолић 2025. Сва права задржана.</p>
+        </footer>
+        <script src="./scripts/ChapterSearch.js"></script>
+    </div>
+</body>
+</html>

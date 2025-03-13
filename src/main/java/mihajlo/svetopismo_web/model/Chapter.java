@@ -4,6 +4,8 @@ package mihajlo.svetopismo_web.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.Set;
+
 @Entity
 @Table(name = "glave")
 @Data
@@ -21,8 +23,9 @@ public class Chapter {
     @Column(name = "stihovi", nullable = false)
     private String verses;
 
-    @Column(name = "knjiga_broj", nullable = false)
-    private int bookNumber;
+    @ManyToOne
+    @JoinColumn(name="knjiga_broj", referencedColumnName = "knjiga_broj")
+    private Book book;
 
     @Column(name = "prevod_id", nullable = false, unique = true)
     private int translationId;

@@ -15,7 +15,11 @@ public class ChapterService {
         this.chapterRepository = chapterRepository;
     }
 
-    public List<Chapter> findChapterByNumber(int bookNumber, int chapterNumber) {
-        return chapterRepository.searchChapterByNumber(bookNumber, chapterNumber);
+    public List<Chapter> findChapterByNumberAndBookName(String bookName, int chapterNumber) {
+        return chapterRepository.searchChapterByNumberAndBookName(bookName, chapterNumber);
+    }
+
+    public List<Chapter> findChapterByNumberAndBookNumber(int bookNumber, int chapterNumber) {
+        return chapterRepository.searchChapterByNumberAndBookNumber(bookNumber, chapterNumber);
     }
 }

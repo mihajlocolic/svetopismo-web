@@ -18,7 +18,6 @@ public class BookController {
         this.bookService = bookService;
     }
 
-    @CrossOrigin(origins = "http://localhost:5500")
     @GetMapping("/")
     public List<Book> getAllBooks() {
         return bookService.showAll();
@@ -30,12 +29,12 @@ public class BookController {
     }
 
     @RequestMapping(value = "/ime", method = RequestMethod.GET)
-    public List<Book> findBooksByName(@RequestParam(value = "keyword") String bookTitle) {
+    public List<Book> findBooksByName(@RequestParam(value = "bookName") String bookTitle) {
         return bookService.findByTitle(bookTitle.trim());
     }
 
     @RequestMapping(value = "/skracenica", method = RequestMethod.GET)
-    public List<Book> findBooksByAbbreviation(@RequestParam(value = "keyword") String abbreviation) {
+    public List<Book> findBooksByAbbreviation(@RequestParam(value = "bookName") String abbreviation) {
         return bookService.findByAbbreviation(abbreviation.trim());
     }
 
